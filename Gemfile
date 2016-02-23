@@ -51,3 +51,5 @@ end
 gem "haml-rails"
 
 gem 'react-rails', '~> 1.0'
+
+gem 'heroku'
