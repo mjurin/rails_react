@@ -1,0 +1,17 @@
+= 'CLIENT_ID: '
+= ENV['SLACK_APP_ID']
+
+- scope = 'identify,incoming-webhook,team:read,users:read,channels:read,im:read,im:write,groups:read,emoji:read,chat:write:bot'
+
+%a{href: "https://slack.com/oauth/authorize?scope=#{scope}&client_id=#{ENV['SLACK_APP_ID']}.19511902963&redirect_uri=http://slackbot.dev/authenticate"}= 'LINK'
+
+%a{href: user_omniauth_authorize_path(:slack)}
+
+  = image_tag "https://platform.slack-edge.com/img/add_to_slack.png", alt: 'Add to Slack', height:"40", width: "139", srset: "https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"
+
+
+
+
+
+
+authentication_code = code"=>"2272570152.19510819796.b027420c7d". What to do with it?
