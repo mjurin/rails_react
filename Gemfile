@@ -4,8 +4,7 @@ ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 #use bootstramp
 gem 'bootstrap-sass'
 # Use SCSS for stylesheets
@@ -46,7 +45,17 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
+
+group :production do
+  gem 'rails_12factor', '0.0.2' #needed for heroku
+  # gem 'rails_serve_static_assets'
+  # Use postgre as the database for Active Record
+  gem 'pg', '~> 0.17.1'
+end
+
 
 gem "haml-rails"
 
